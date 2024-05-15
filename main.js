@@ -162,7 +162,7 @@ pay.addEventListener('click', async () => {
 
 //server
 const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-  manifestUrl: `${url}/tonconnect-manifest.json`,
+  manifestUrl: 'https://jhgg11.github.io/web/tonconnect-manifest.json',
   buttonRootId: 'connect'
 });
 
