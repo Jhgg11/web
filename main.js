@@ -29,7 +29,7 @@ const nanBalance = document.querySelector('.nanBalance');
 let balance = 0
 let eggsBlock = []
 const url = 'https://jhgg11.github.io/web/'
-const serverUrl = "https://64.23.239.166:5004"
+const serverUrl = "https://10.124.0.2:5004"
 let count = 0
 
 // clicker logic
