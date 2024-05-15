@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Birds on TON</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="bird-container">
+            <img src="images/bird.png" alt="bird" class="bird">
+        </div>
+        <div class="wrapper none">
+            <div class="bg"></div>
+            <div class="modal-click">
+                <div class="score">SCORE: <span id="score"></span> </div>
+                <div class="X">X</div>
+                <div>
+                    <img id="click-img" class="click-img" src="images/clickCoin.png" alt="coin">
+                </div>
+            </div>
+        </div>
+        <header>
+            <img class="topHeader" src="images/top.png" alt="header">
+            <div class="header">
+                <div class="left">
+                    <div id="dep" class="content">
+                        <img src="images/ton.png" alt="ton">
+                        <span class="balance">0</span>
+                        <img src="images/plus.png" alt="plus">
+                    </div>
+                </div>
+                <img src="images/coin.png" alt="coin">
+                <div class="right">
+                    <div class="content">
+                        <img src="images/coinH.png" alt="coinH">
+                        <span class="nanBalance">0</span>
+                        <img src="images/i.png" alt="i">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <footer>
+            <img class="footerImg" src="images/bot.png" alt="footer">
+            <div class="links">
+                <div id="store"><img src="images/shop.png" alt="shop"></div>
+                <div id="clicker"><img src="images/cas.png" alt="cas"></div>
+                <div id="referals"><img src="images/friend.png" alt="friendg"></div>
+            </div>
+        </footer>
+    </div>
+    <div id="shop" class="none">
+        <div class="bg"></div>
+        <div class="wrapper">
+            <div class="closeBg">X</div>
+            <div class="store">
+                <h2>Лавка</h2>
+                <div class="egg">
+                    <img class="absolute" src="images/iron.png" alt="iron">
+                    <div class="flex">
+                        <img class="eggImg" src="images/purpleEgg.png" alt="">
+                        <div class="egg-content">
+                            <div class="value">
+                                1 TON EGG
+                            </div>
+                            <img class="eggPlus" id="1000000000" src="images/plusEgg.png" alt="">
+                            <div class="cost">
+                                (+ 0.5 TON)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="egg">
+                    <img class="absolute" src="images/iron.png" alt="iron">
+                    <div class="flex">
+                        <img class="eggImg" src="images/yellowEgg.png" alt="">
+                        <div class="egg-content">
+                            <div class="value">
+                                0.5 TON EGG
+                            </div>
+                            <img class="eggPlus" id="500000000" src="images/plusEgg.png" alt="">
+                            <div class="cost">
+                                (+ 0.25 TON)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="egg">
+                    <img class="absolute" src="images/iron.png" alt="iron">
+                    <div class="flex">
+                        <img class="eggImg" src="images/whiteEgg.png" alt="">
+                        <div class="egg-content">
+                            <div class="value">
+                                0.2 TON EGG
+                            </div>
+                            <img class="eggPlus" id="200000000" src="images/plusEgg.png" alt="">
+                            <div class="cost">
+                                (+ 0.15 TON)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="X">X</div>
+            <div>
+                <div id="connect" class="connect"></div>
+                <div id="pay" class="pay">PAY: <span id="paySpn"></span> TON</div>
+            </div>
+        </div>
+    </div>
+    <div id="info" class="none info">
+        <div class="bg"></div>
+        <div class="wrapper">
+            <div class="closeBg">X</div>
+            <div class="store">
+                <div class=""><img src="images/coin.png" alt=""></div>
+                <div class="mb">$BIRDS</div>
+                <div>20%</div>
+                <div class="proc">PlayToAirdrop</div>
+                <div>30%</div>
+                <div class="proc">Открытый запуск</div>
+                <div>15%</div>
+                <div class="proc">Листинг на DEX</div>
+                <div>10%</div>
+                <div class="proc">Фарминг</div>
+                <div>10%</div>
+                <div class="proc">Команда</div>
+                <div>15%</div>
+                <div class="proc">Маркетинг</div>
+                <div><img src="images/coin.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div id="withdraw" class="none info withdraw">
+        <div class="bg"></div>
+        <div class="wrapper">
+            <div class="closeBg">X</div>
+            <div class="store">
+                <h2> <img src="images/ton.png" alt=""> <span class="balance"></span> TON</h2>
+                <div class="egg">
+                    <img class="absolute" src="images/iron.png" alt="iron">
+                    <div class="ironcont">
+                        Сумма для вывода: 
+                        <input required type="number">
+                    </div>
+                </div>
+                <div class="egg">
+                    <img class="absolute" src="images/iron.png" alt="iron">
+                    <div class="ironcont">
+                        Адрес для вывода: 
+                        <input required type="text">
+                    </div>
+                </div> 
+                <div id="withdrawBtn" class="egg">
+                    <img class="absolute" src="images/board.png" alt="iron">
+                    <div class="withdraw-btn">
+                        Вывод
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ref" class="none ref">
+        <div class="bg"></div>
+        <div class="wrapper">
+            <div class="closeBg">X</div>
+            <div class="store">
+                <h2>REFERALS</h2>
+                <div class="egg">
+                    <img class="absolute" src="images/iron.png" alt="iron">
+                    <div class="ironcont">
+                        NUMBER OF REFERALS: <span id="refNum"></span>
+                    </div>
+                </div>
+                <div class="egg">
+                    <img class="absolute" src="images/iron.png" alt="iron">
+                    <div class="ironcont">
+                        <div class="flex">EARNED <img src="images/coin.png" alt=""> </div>
+                        $BIRDS: <span id="earned"></span>
+                    </div>
+                </div>
+                <div class="ref-link">
+                    REFERAL LINK
+                    <div><img src="images/copy.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
