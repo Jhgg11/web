@@ -28,8 +28,8 @@ const nanBalance = document.querySelector('.nanBalance');
 //constants
 let balance = 0
 let eggsBlock = []
-const url = 'http://127.0.0.1:5500'
-const serverUrl = "http://localhost:5004"
+const url = 'https://jhgg11.github.io/web/'
+const serverUrl = "http://64.23.239.166:5004"
 let count = 0
 
 // clicker logic
